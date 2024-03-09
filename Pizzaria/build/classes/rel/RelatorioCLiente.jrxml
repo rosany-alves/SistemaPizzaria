@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioCLiente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df78fa1a-c467-44f1-bba5-687485233a1b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="-19" width="210" height="50" forecolor="#37378A" uuid="6e989944-c038-4c0c-9759-8dc05a8f97a8"/>
+				<textElement>
+					<font fontName="Segoe Print" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pizzaria Senai]]></text>
+			</staticText>
+			<image>
+				<reportElement x="11" y="-12" width="66" height="62" uuid="ef7bc6b0-3de6-429c-8009-11665880712a"/>
+				<imageExpression><![CDATA["/imagens/cliente.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="82" y="33" width="170" height="21" uuid="ce5cc10c-29e8-4b09-b981-8a6f77dc9771"/>
+				<textElement textAlignment="Left">
+					<font fontName="Bahnschrift" size="16"/>
+				</textElement>
+				<text><![CDATA[Relatório de Clientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="10" width="238" height="21" uuid="cf74e36b-9196-4d69-9ed0-2d1acc310d31"/>
+				<textElement textAlignment="Left">
+					<font fontName="Bahnschrift" size="16"/>
+				</textElement>
+				<text><![CDATA[Sistema de Controle de Pizzaria]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="360" y="35" width="195" height="19" uuid="18cfb240-fabb-4068-93db-cf3d9e904297"/>
+				<textFieldExpression><![CDATA["Impresso em: " + new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-11" y="53" width="566" height="1" uuid="97df61fe-c19d-41c2-8e94-b01623ca851e"/>
+			</line>
+			<line>
+				<reportElement x="82" y="31" width="473" height="1" uuid="29372ed4-1970-4ce7-89b2-b344481ac729"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="82" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<line>
+				<reportElement x="-6" y="3" width="566" height="1" uuid="0762c0b7-6ae8-44c6-a8de-6751c65079e8"/>
+			</line>
+			<textField>
+				<reportElement x="140" y="10" width="230" height="30" uuid="4bbf2ec2-6f3b-467a-bde0-ae3fef52f8b6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER} + "de " +$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
